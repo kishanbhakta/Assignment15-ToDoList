@@ -2,7 +2,7 @@
 var Todo = function (variables) {
   var variable = variables || {};
   this.task = variable.task;
-  this.status = 'Open';
+  this.status = 'open';
 };
 
 
@@ -20,8 +20,8 @@ var taskList = [];
 
 
   //push taskText to taskList
-  taskList.push(taskText);
-  console.log(taskList);
+  taskList.push(newTask);
+  // console.log(taskList);
 
   // Put taskText on page
   $('.info').append('<li>' + taskText + '</li>');
@@ -32,6 +32,21 @@ var taskList = [];
 });
 
 
+// Toggle status 'open' to 'closed'
 
+// create click events
+  $('.info').on('click', 'li', function (event) {
+    event.preventDefault();
+    $(this).addClass('select');
+
+    var tTask = $(this).text();
+    console.log(tTask);
+
+    var openTask = _.find(taskList, { task: tTask } );
+    console.log(openTask);
+
+
+
+  });
 
 
