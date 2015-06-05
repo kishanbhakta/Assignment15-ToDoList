@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vendor/font-awesome.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1><i class="fa fa-check-square-o"></i><span>Bauce Todo List</span></h1>
+        <span>Number of entries:</span>
+        <span class="numEntry"></span>
+        <form id="addTask">
+            To Do Entry:
+            <br>
+            <input type="text" class="entryField">
+            <br>
+            <input type="submit" class="addTask">
+        </form>
+        <ul class="info"></ul>
+    </div>
+    <!-- VENDOR -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/handlebars.js"></script>
+    <!-- TEMPLATES -->
+    <script src="js/templates.js"></script>
+    <!-- MAIN -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
