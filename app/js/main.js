@@ -28,7 +28,7 @@ var taskList = [];
 
   //automatically resets entryField
   this.reset();
-  console.log(newTask);
+  // console.log(newTask);
 });
 
 
@@ -40,13 +40,60 @@ var taskList = [];
     $(this).addClass('select');
 
     var tTask = $(this).text();
-    console.log(tTask);
+    // console.log(tTask);
 
     var openTask = _.find(taskList, { task: tTask } );
-    console.log(openTask);
+    // console.log(openTask);
+// take the edit when click on and change the status
+    openTask.status = 'closed';
+});
+
+
+// Toggle status 'closed' to 'open'
+
+$('.info').on('click', '.select', function (event) {  /* you use .select so you do select every li in in the ul*/
+    event.preventDefault();
+    $(this).removeClass('select');
+
+    var tTask = $(this).text();
+    // console.log(tTask);
+
+    var openTask = _.find(taskList, { task: tTask } );
+    // console.log(openTask);
+// take the edit when click on and change the status
+    openTask.status = 'open';
+
+});
+
+// Clear out the completed tasks and sent back open tasks
+$('.removeBtn').on('click', function(event) {
+    event.preventDefault();
+    taskList = taskList.filter(function(a) {
+      if (a.status == 'open'){
+        return a;
+      }
+      taskList.push(a); /*if it is open it get pushed back to task list*/
+    });
+
+$('.info').empty();
+taskList.forEach(function(b) {
+$('.info').append('<li>' + b.task + '</li>');});
+
+});
 
 
 
-  });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
