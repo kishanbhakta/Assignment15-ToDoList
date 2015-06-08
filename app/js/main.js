@@ -29,6 +29,7 @@ var taskList = [];
   //automatically resets entryField
   this.reset();
   // console.log(newTask);
+  count();
 });
 
 
@@ -46,6 +47,8 @@ var taskList = [];
     // console.log(openTask);
 // take the edit when click on and change the status
     openTask.status = 'closed';
+
+    count();
 });
 
 
@@ -63,6 +66,7 @@ $('.info').on('click', '.select', function (event) {  /* you use .select so you 
 // take the edit when click on and change the status
     openTask.status = 'open';
 
+    count();
 });
 
 // Clear out the completed tasks and sent back open tasks
@@ -79,7 +83,23 @@ $('.info').empty();
 taskList.forEach(function(b) {
 $('.info').append('<li>' + b.task + '</li>');});
 
+count();
+
 });
+
+
+// Add counting function
+function count(){
+  var totalCount = 0;
+  taskList.forEach(function(x) {
+    if (x.status == 'open') {
+      return x.totalCount ++;
+    }
+    taskList.push(totalCount);
+  });
+  $('.entrycount').html(totalCount);
+}
+
 
 
 

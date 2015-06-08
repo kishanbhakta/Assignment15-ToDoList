@@ -1,2 +1,47 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
 .select {
   text-decoration: line-through; }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.todocontainer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%; }
+  .todocontainer:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    .todocontainer {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 73.14426%; }
+      .todocontainer:last-child {
+        margin-right: 0; } }
+  .todocontainer h1 {
+    text-align: center; }
+  .todocontainer .count {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2em; }
+  .todocontainer .tasks .entryfield {
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto; }
