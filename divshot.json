@@ -1,5 +1,5 @@
 {
-  "name": "bhktkshn-Todo",
+  "name": "bhktkshn-todo",
   "root": "app",
   "clean_urls": true,
   "error_page": "error.html"
