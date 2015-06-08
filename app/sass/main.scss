@@ -9,6 +9,8 @@ $darkseagreen: #84b586;
 $darkslategray: #3b3538;
 $black: #211c1f;
 $whitesmoke: #ececec;
+
+
 // ===================
 // Main Content
 // ===================
@@ -18,6 +20,7 @@ $whitesmoke: #ececec;
 
 .container {
  @include outer-container;
+ font-family: 'Quicksand', sans-serif;
 }
 
 .todocontainer {
@@ -28,19 +31,33 @@ $whitesmoke: #ececec;
   }
   h1 {
     text-align: center;
+    border: 5px solid $black;
   }
   .count {
+    width: 12em;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     font-size: 2em;
   }
   .tasks {
-    .entryfield {
-    width: 20em;
+    .entryField {
+    width: 33em;
+    height: 3em;
     margin-left: auto;
     margin-right: auto;
     }
+    .subTask{
+    width: 5em;
+    margin-top: 1em;
+    font-size: 12px;
+    background-color: $darkseagreen;
+    color: $whitesmoke;
+    }
   }
-
+    button {
+    font-size: 12px;
+    background-color: $darkseagreen;
+    color: $whitesmoke;
+    }
 }

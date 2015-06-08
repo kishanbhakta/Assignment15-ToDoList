@@ -24,7 +24,7 @@ var taskList = [];
   // console.log(taskList);
 
   // Put taskText on page
-  $('.info').append('<li>' + taskText + '</li>');
+  $('.info').append('<li class="listitem">' + taskText + '</li>');
 
   //automatically resets entryField
   this.reset();
