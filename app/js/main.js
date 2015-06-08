@@ -92,8 +92,9 @@ count();
 function count(){
   var totalCount = 0;
   taskList.forEach(function(x) {
-    if (x.status == 'open') {
-      return x.totalCount ++;
+    if (x.status === 'open') {
+      return totalCount ++;
+      console.log(totalCount)
     }
     taskList.push(totalCount);
   });
