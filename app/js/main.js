@@ -5,6 +5,13 @@ var Todo = function(variables) {
     this.status = 'open';
 };
 
+Todo.prototype.toggle = function () {
+
+    if (this.status === 'open') {
+        this.status = 'closed';
+    }else (this.status = 'open');
+};
+
 
 
 /*Create Instances*/
@@ -50,7 +57,7 @@ $('.info').on('click', 'li', function(event) {
     });
     // console.log(openTask);
     // take the edit when click on and change the status
-    openTask.status = 'closed';
+    openTask.toggle ();
 
     count();
 });
@@ -70,7 +77,7 @@ $('.info').on('click', '.select', function(event) { /* you use .select so you do
     });
     // console.log(openTask);
     // take the edit when click on and change the status
-    openTask.status = 'open';
+    openTask.toggle ();
 
     count();
 });
